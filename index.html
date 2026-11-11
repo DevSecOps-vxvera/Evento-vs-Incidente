@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Actividad interactiva con 14 escenarios para distinguir eventos de incidentes de ciberseguridad, incluidos casos de deepfake e inteligencia artificial.">
+  <title>¿Evento o incidente? · Reto interactivo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio"><span class="brand-mark">E/I</span><span>CLASIFICA <b>EL CASO</b></span></a>
+    <nav aria-label="Navegación principal"><a href="#como-jugar">Cómo jugar</a><a href="#fuentes">Fuentes</a></nav>
+    <span class="offline-pill"><i></i> Actividad sin conexión</span>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> ACTIVIDAD DE RESPUESTA A INCIDENTES · 10–15 MIN</p>
+        <h1>¿Evento o<br><em>incidente?</em></h1>
+        <p class="hero-lede">Una alerta no siempre significa que hubo un incidente. Analiza lo que ocurrió, el impacto y la evidencia para decidir cuándo escalar.</p>
+        <a class="primary-button" href="#reto">Comenzar el reto <span aria-hidden="true">↓</span></a>
+        <div class="hero-meta"><span><b>14</b> escenarios</span><span class="meta-divider"></span><span>Casos tradicionales + IA</span></div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        <div class="visual-core"><span>SEÑAL</span><b>?</b><span>DECISIÓN</span></div>
+        <div class="visual-node node-event"><span class="node-glyph">◌</span><b>Evento</b><small>Señal observable</small></div>
+        <div class="visual-node node-incident"><span class="node-glyph">!</span><b>Incidente</b><small>Impacto o amenaza</small></div>
+        <span class="visual-label label-a">EVIDENCIA</span><span class="visual-label label-b">CONTEXTO</span>
+      </div>
+    </section>
+
+    <section id="como-jugar" class="primer">
+      <div class="primer-title"><p class="eyebrow">ANTES DE EMPEZAR</p><h2>La diferencia está en el impacto.</h2></div>
+      <div class="definition-grid">
+        <article class="definition event-definition"><div class="definition-icon">◌</div><div><span class="definition-kicker">EVENTO</span><h3>Algo que ocurre y puede observarse.</h3><p>Un inicio de sesión, una alerta, una solicitud sospechosa o un intento bloqueado. Requiere contexto; por sí solo no confirma un incidente.</p></div></article>
+        <article class="definition incident-definition"><div class="definition-icon">!</div><div><span class="definition-kicker">INCIDENTE</span><h3>Se compromete o amenaza la seguridad.</h3><p>Hay impacto real o inminente en confidencialidad, integridad o disponibilidad, o una violación de políticas que requiere respuesta.</p></div></article>
+      </div>
+      <div class="rule-strip"><span class="rule-icon">i</span><p><b>Pregunta guía:</b> ¿hay evidencia de acceso, divulgación, alteración, indisponibilidad o una violación de política? Clasifica con los hechos disponibles y el procedimiento de tu organización.</p></div>
+    </section>
+
+    <section id="reto" class="challenge">
+      <div class="challenge-heading">
+        <div><p class="eyebrow">PON A PRUEBA TU CRITERIO</p><h2>Clasifica cada escenario.</h2><p class="section-lede">Lee el caso y elige una opción. Después revisa por qué y qué evidencia marcó la diferencia.</p></div>
+        <div class="score-box"><span>ACIERTOS</span><strong id="score-count">0</strong><small>de <span id="total-count">14</span></small></div>
+      </div>
+      <div class="challenge-shell">
+        <div class="challenge-topline"><div class="progress-copy"><span id="progress-label">ESCENARIO 01 DE 14</span><span id="progress-percent">0%</span></div><div class="progress-track" role="progressbar" aria-label="Progreso del reto" aria-valuemin="0" aria-valuemax="14" aria-valuenow="0"><div id="progress-fill"></div></div></div>
+        <div id="scenario-panel" class="scenario-panel" aria-live="polite"></div>
+        <div id="feedback" class="feedback" hidden aria-live="polite"></div>
+        <div class="challenge-actions"><button id="restart-button" class="quiet-button" type="button">Reiniciar</button><button id="next-button" class="next-button" type="button" disabled>Siguiente escenario <span aria-hidden="true">→</span></button></div>
+      </div>
+    </section>
+
+    <section class="takeaway">
+      <div class="takeaway-mark" aria-hidden="true">✓</div><div><p class="eyebrow">IDEA PARA LLEVAR</p><h2>La alerta es el inicio del análisis.</h2><p>La IA puede acelerar el engaño, crear contenido falso o actuar a través de agentes. La clasificación depende de lo que pasó y de su impacto, no de que la herramienta sea nueva.</p></div>
+    </section>
+
+    <section id="fuentes" class="sources">
+      <div class="sources-heading"><div><p class="eyebrow">REFERENCIAS</p><h2>La regla detrás del reto</h2></div><span class="fiction-tag">ESCENARIOS FICTICIOS</span></div>
+      <div class="source-list">
+        <a class="source-card" href="https://csrc.nist.gov/glossary/term/cybersecurity_incident" target="_blank" rel="noopener noreferrer"><span class="source-icon">N</span><span><b>NIST · Cybersecurity Incident</b><small>Definición: ocurrencia que compromete o amenaza la seguridad o viola políticas.</small></span><span class="external" aria-hidden="true">↗</span></a>
+        <a class="source-card" href="https://doi.org/10.6028/NIST.SP.800-61r3" target="_blank" rel="noopener noreferrer"><span class="source-icon">N</span><span><b>NIST SP 800-61 Rev. 3</b><small>Recomendaciones para integrar la respuesta a incidentes en la gestión del riesgo de ciberseguridad.</small></span><span class="external" aria-hidden="true">↗</span></a>
+      </div>
+      <p class="source-note">Material didáctico. Las clasificaciones de la actividad ilustran un criterio general; sigue las definiciones, umbrales y rutas de escalamiento aprobados por tu organización.</p>
+    </section>
+  </main>
+  <footer><span>CLASIFICA EL CASO · EVENTO / INCIDENTE</span><span>Aprende a separar la señal del impacto.</span><a href="#inicio">Volver arriba ↑</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
